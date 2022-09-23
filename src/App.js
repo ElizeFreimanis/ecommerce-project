@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import "./App.css";
+import * as S from "./styles";
 import headers from "./apiConfig";
 import { useSelector, useDispatch } from "react-redux";
 import { loadProducts } from "./redux/actions";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
     const dispatch = useDispatch();
@@ -14,12 +16,14 @@ function App() {
             .then((data) => dispatch(loadProducts(data)));
     }, [dispatch]);
 
-    console.log(products);
-
     return (
-        <div className='App'>
-            <h1 dangerouslySetInnerHTML={{ __html: products?.[0].description }}></h1>
-        </div>
+        <>
+            <S.GlobalStyle />
+            <S.Container>
+                <Header />
+            </S.Container>
+            <Outlet />
+        </>
     );
 }
 
