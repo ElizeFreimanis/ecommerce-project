@@ -1,0 +1,40 @@
+import styled from "styled-components";
+import { MontserratParagraph, MontserratTitle } from "../Typography/Typography";
+import Button from "../Button/Button";
+
+export const Container = styled.div`
+    background-color: black;
+    height: 250px;
+    position: "relative";
+`;
+
+export const Image = styled.img`
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.6;
+    height: 250px;
+`;
+
+export const Content = styled.div`
+    padding: 10vw 0vw 12vw 8vw;
+    z-index: 1;
+    position: relative;
+    color: white;
+    height: 100%;
+`;
+
+export const Header = styled(MontserratTitle)`
+    font-size: 40px;
+`;
+
+export const Paragraph = styled(MontserratParagraph)`
+    padding-left: 2px;
+`;
+
+export const SectionButton = styled(Button)`
+    position: absolute;
+    bottom: 10vw;
+    right: 25%;
+    width: 50%;
+`;

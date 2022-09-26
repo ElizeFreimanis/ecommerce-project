@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import * as S from "./styled";
-import { Divider } from "../Layout/Divider";
 import { useLocation } from "react-router-dom";
+import SocialMedia from "../SocialMedia";
 
 export default function Menu() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -38,22 +37,31 @@ export default function Menu() {
             <S.MenuIcon onClick={toggle} />
             <S.Menu id='menu' open={menuOpen}>
                 <S.ClosingIcon onClick={toggle} />
-                <S.MenuOptions>HOME</S.MenuOptions>
-                <Divider />
-                <S.MenuOptions>NEWS</S.MenuOptions>
-                <Divider />
-                <Link style={{ textDecoration: "none" }} to='/products'>
+                <S.LinkTo to='/'>
+                    <S.MenuOptions>HOME</S.MenuOptions>
+                </S.LinkTo>
+                <S.MenuDivider />
+                <S.LinkTo to='/products'>
+                    <S.MenuOptions>NEWS</S.MenuOptions>
+                </S.LinkTo>
+                <S.MenuDivider />
+                <S.LinkTo to='/products'>
                     <S.MenuOptions>ALL PRODUCTS</S.MenuOptions>
-                </Link>
-                <Divider />
-                <S.MenuOptions>SKINCARE</S.MenuOptions>
-                <Divider />
-                <S.MenuOptions>MAKEUP</S.MenuOptions>
-                <Divider />
-                <Link style={{ textDecoration: "none" }} to='/purpose'>
+                </S.LinkTo>
+                <S.MenuDivider />
+                <S.LinkTo to='/products'>
+                    <S.MenuOptions>SKINCARE</S.MenuOptions>
+                </S.LinkTo>
+                <S.MenuDivider />
+                <S.LinkTo to='/products'>
+                    <S.MenuOptions>MAKEUP</S.MenuOptions>
+                </S.LinkTo>
+                <S.MenuDivider />
+                <S.LinkTo to='/purpose'>
                     <S.MenuOptions>OUR VISION</S.MenuOptions>
-                </Link>
-                <Divider />
+                </S.LinkTo>
+                <S.MenuDivider />
+                <SocialMedia />
             </S.Menu>
         </S.Container>
     );

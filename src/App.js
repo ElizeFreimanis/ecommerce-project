@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { loadProducts } from "./redux/actions";
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
     const dispatch = useDispatch();
@@ -21,8 +22,9 @@ function App() {
             <S.GlobalStyle />
             <S.Container>
                 <Header />
+                <Outlet />
+                <Footer />
             </S.Container>
-            <Outlet />
         </>
     );
 }

@@ -1,11 +1,18 @@
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
+import * as S from "./styled";
 
 export default function SocialMedia() {
     return (
-        <div style={{ display: "flex" }}>
-            <FiFacebook />
-            <FiInstagram />
-            <FiTwitter />
-        </div>
+        <S.Container>
+            <S.Link href='https://www.facebook.com/' target='_blank' rel='noreferrer'>
+                <FiFacebook />
+            </S.Link>
+            <S.Link href='https://www.instagram.com/' target='_blank' rel='noreferrer'>
+                <FiInstagram />
+            </S.Link>
+            <S.Link href='https://www.twitter.com/' target='_blank' rel='noreferrer'>
+                <FiTwitter />
+            </S.Link>
+        </S.Container>
     );
 }

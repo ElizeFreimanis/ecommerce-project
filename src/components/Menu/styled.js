@@ -2,6 +2,8 @@ import styled from "styled-components";
 import fonts from "../../constants/fonts";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import colors from "../../constants/colors";
+import { Link } from "react-router-dom";
+import { Divider } from "../Layout/Divider";
 
 export const Container = styled.div`
     color: white;
@@ -20,17 +22,16 @@ export const Menu = styled.ul`
     font-weight: 700;
     font-family: ${fonts.montserrat};
     font-size: 18px;
-    position: absolute;
+    position: fixed;
     transform: ${(props) => (props.open ? "translateX(0)" : "translateX(-100%)")};
-    transition: transform 0.5s;
-    background-color: ${colors.lightBeige};
+    transition: transform 0.35s;
+    background-color: ${colors.darkBeige};
     height: 100vh;
-    position: absolute;
     top: 0;
     width: 75%;
-    color: ${colors.black};
     left: 0;
     padding-top: 10%;
+    box-shadow: ${(props) => (props.open ? "1px 0px 300px black" : 0)};
 
     @media (min-width: 768px) {
         margin: 20px auto;
@@ -48,7 +49,15 @@ export const ClosingIcon = styled(FiX)`
     margin: 10px;
 `;
 
+export const LinkTo = styled(Link)`
+    text-decoration: none;
+`;
+
 export const MenuOptions = styled.li`
     margin: 7%;
-    color: ${colors.black};
+    color: ${colors.white};
+`;
+
+export const MenuDivider = styled(Divider)`
+    background-color: ${colors.white};
 `;

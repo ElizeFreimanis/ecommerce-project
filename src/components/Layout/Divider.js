@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const Divider = styled.hr`
-    width: ${(props) => (props.width ? props.width : "50px")};
-    height: 0.5px;
+export const Divider = styled.div`
+    width: 50px;
+    height: 1px;
     border-width: 0;
-    margin: auto;
-    background-color: black;
+    margin: 0 auto;
 `;

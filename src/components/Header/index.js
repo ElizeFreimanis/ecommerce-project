@@ -7,7 +7,6 @@ import FlexContainer from "../Layout/FlexContainer";
 
 export default function Header() {
     const location = useLocation();
-    console.log(location);
 
     return (
         <S.Container background={location.pathname !== "/"}>
