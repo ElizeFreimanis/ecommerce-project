@@ -6,8 +6,7 @@ import colors from "../../constants/colors";
 
 export const Container = styled.div`
     text-align: center;
-    width: 47%;
-    margin: 13px 5px 0 5px;
+    width: 49%;
 `;
 
 export const Content = styled(FlexContainer)`
@@ -15,13 +14,12 @@ export const Content = styled(FlexContainer)`
 `;
 
 export const Image = styled.img`
-    height: 58vw;
     object-fit: contain;
 `;
 
 export const ProductInformation = styled(FlexContainer)`
     flex-direction: column;
-    height: 47vw;
+    height: 37vw;
     position: relative;
 `;
 
@@ -29,15 +27,19 @@ export const ProductName = styled(MontserratTitle)`
     font-size: 4vw;
     color: ${colors.darkBeige};
     font-weight: 600;
+    padding: 0 10px;
+    height: 40px;
 `;
 
 export const ProductDescription = styled(MontserratParagraph)`
     margin-top: 1%;
     font-size: 3.5vw;
+    color: ${colors.darkBrown};
 `;
 
 export const Price = styled(MontserratParagraph)`
     font-size: 4vw;
+    color: ${colors.darkBrown};
     font-weight: 600;
     margin-top: 5%;
 `;
@@ -45,11 +47,12 @@ export const Price = styled(MontserratParagraph)`
 export const ProductButton = styled(Button)`
     width: 100%;
     border: none;
-    padding: 0 0;
     height: 12vw;
     font-size: 3.9vw;
     font-weight: 600;
     letter-spacing: 1px;
     background-color: ${colors.darkBeige};
     color: white;
+    position: absolute;
+    bottom: 0;
 `;

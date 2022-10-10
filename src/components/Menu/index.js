@@ -41,15 +41,15 @@ export default function Menu() {
                     <S.MenuOptions>HOME</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
-                <S.LinkTo to='/products'>
+                <S.LinkTo to='/products/news'>
                     <S.MenuOptions>NEWS</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
-                <S.LinkTo to='/products'>
+                <S.LinkTo to='/products/skincare'>
                     <S.MenuOptions>SKINCARE</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
-                <S.LinkTo to='/products'>
+                <S.LinkTo to='/products/makeup'>
                     <S.MenuOptions>MAKEUP</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />

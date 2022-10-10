@@ -4,7 +4,11 @@ import { MontserratTitle } from "../../components/Typography/Typography";
 import colors from "../../constants/colors";
 
 export const Container = styled.div`
-    padding-top: 7vw;
+    padding: 7vw 3vw 7vw 3vw;
+`;
+
+export const SpinnerContainer = styled.div`
+    padding: 15px;
 `;
 
 export const Header = styled(MontserratTitle)`
@@ -17,5 +21,5 @@ export const Header = styled(MontserratTitle)`
 
 export const Content = styled(FlexContainer)`
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 `;
