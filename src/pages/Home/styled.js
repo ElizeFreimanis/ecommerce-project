@@ -10,6 +10,7 @@ export const HeaderImage = styled.img`
     width: 100%;
     height: 80vh;
     object-fit: cover;
+    backface-visibility: hidden;
 `;
 
 export const InfoText = styled(MontserratParagraph)`

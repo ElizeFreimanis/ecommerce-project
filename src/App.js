@@ -13,10 +13,12 @@ function App() {
     const location = useLocation();
 
     useEffect(() => {
-        fetch("https://elizes-site.local/wp-json/wc/v3/products", { headers })
+        fetch("https://elizes-site.local/wp-json/wc/v3/products?per_page=100", { headers })
             .then((response) => response.json())
             .then((data) => dispatch(loadProducts(data)));
     }, [dispatch]);
+
+    console.log(products);
 
     return (
         <>

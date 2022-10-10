@@ -17,7 +17,9 @@ root.render(
                 <Routes>
                     <Route path='/' element={<App />}>
                         <Route index element={<Home />} />
-                        <Route path='products' element={<Products />} />
+                        <Route path='products/makeup' element={<Products title='Makeup' category='makeup' />} />
+                        <Route path='products/news' element={<Products title='News' category='news' />} />
+                        <Route path='products/skincare' element={<Products title='Skincare' category='skincare' />} />
                         <Route path='productpage' element={<ProductPage />} />
                         <Route path='purpose' element={<Purpose />} />
                     </Route>

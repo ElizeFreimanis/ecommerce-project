@@ -19,9 +19,19 @@ export default function Home() {
                 </S.InfoText>
                 <S.TextDivider />
             </S.InfoTextContainer>
-            <ImageSection header='MAKEUP' paragraph='FIND YOUR FAVOURITES' image='/images/makeupCover.jpg' />
+            <ImageSection
+                header='MAKEUP'
+                paragraph='FIND YOUR FAVOURITES'
+                image='/images/makeupCover.jpg'
+                link='/products/makeup'
+            />
             <PopularSection />
-            <ImageSection header='SKINCARE' paragraph='FOR THE PERFECT FACE' image='/images/skincareCover.png' />
+            <ImageSection
+                header='SKINCARE'
+                paragraph='FOR THE PERFECT FACE'
+                image='/images/skincareCover.png'
+                link='/products/skincare'
+            />
             <PopularSection />
         </S.Container>
     );

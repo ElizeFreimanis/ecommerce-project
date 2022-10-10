@@ -1,15 +1,15 @@
 import * as S from "./styled";
 
-export default function Product() {
+export default function Product({ price, name, description, img }) {
     return (
         <S.Container>
             <S.Content>
-                <S.Image alt='product' src='images/p2.jpg' />
+                <S.Image alt='product' src={img} />
                 <S.ProductInformation>
                     <S.ProductInformationContent>
-                        <S.ProductName>PRODUCT NAME</S.ProductName>
-                        <S.ProductDescription>Setting spray</S.ProductDescription>
-                        <S.Price>300 SEK</S.Price>
+                        <S.ProductName>{name}</S.ProductName>
+                        <S.ProductDescription dangerouslySetInnerHTML={{ __html: description }} />
+                        <S.Price>{price}</S.Price>
                     </S.ProductInformationContent>
                     <S.ProductButton>SHOP</S.ProductButton>
                 </S.ProductInformation>
