@@ -1,7 +1,7 @@
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 import * as S from "./styled";
 
-export default function SocialMedia() {
+export default function MenuSocialMedia() {
     return (
         <S.Container>
             <S.Link href='https://www.facebook.com/' target='_blank' rel='noreferrer'>

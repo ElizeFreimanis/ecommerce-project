@@ -1,15 +1,16 @@
 import { useEffect } from "react";
-import * as S from "./styles";
+import * as S from "./styled";
 import headers from "./apiConfig";
 import { useSelector, useDispatch } from "react-redux";
 import { loadProducts } from "./redux/actions";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
+    const location = useLocation();
 
     useEffect(() => {
         fetch("https://elizes-site.local/wp-json/wc/v3/products", { headers })
@@ -20,7 +21,7 @@ function App() {
     return (
         <>
             <S.GlobalStyle />
-            <S.Container>
+            <S.Container paddingTop={location.pathname !== "/"}>
                 <Header />
                 <Outlet />
                 <Footer />

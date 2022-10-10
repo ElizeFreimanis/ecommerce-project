@@ -4,11 +4,11 @@ import { FiAlignJustify, FiX } from "react-icons/fi";
 import colors from "../../constants/colors";
 import { Link } from "react-router-dom";
 import { Divider } from "../Layout/Divider";
+import { FlexContainer } from "../Layout/FlexContainer";
 
-export const Container = styled.div`
+export const Container = styled(FlexContainer)`
     color: white;
     order: 1;
-    display: flex;
     align-items: center;
 `;
 
@@ -19,7 +19,7 @@ export const MenuIcon = styled(FiAlignJustify)`
 export const Menu = styled.ul`
     text-align: center;
     list-style: none;
-    font-weight: 700;
+    font-weight: 500;
     font-family: ${fonts.montserrat};
     font-size: 18px;
     position: fixed;
@@ -54,7 +54,7 @@ export const LinkTo = styled(Link)`
 `;
 
 export const MenuOptions = styled.li`
-    margin: 7%;
+    margin: 9%;
     color: ${colors.white};
 `;
 

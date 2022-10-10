@@ -4,6 +4,10 @@ import PopularSection from "../../components/PopularSection";
 import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <S.Container>
             <S.HeaderImage src='/images/header.jpg' alt='header' />

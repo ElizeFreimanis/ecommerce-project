@@ -10,13 +10,13 @@ export const MontserratParagraph = styled.p`
     line-height: 20px;
 `;
 
-export const SourceSerifTitle = styled.h1`
-    font-family: ${fonts.sourceSerifPro};
+export const FiraSansTitle = styled.h1`
+    font-family: ${fonts.firaSans};
     font-size: 20px;
 `;
 
-export const SourceSerifParagraph = styled.p`
-    font-family: ${fonts.sourceSerifPro};
+export const FiraSansParagraph = styled.p`
+    font-family: ${fonts.firaSans};
     font-size: 12px;
     line-height: 20px;
 `;

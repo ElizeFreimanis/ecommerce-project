@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import * as S from "./styled";
 import { useLocation } from "react-router-dom";
-import SocialMedia from "../SocialMedia";
+import MenuSocialMedia from "./MenuSocialMedia";
 
 export default function Menu() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -46,10 +46,6 @@ export default function Menu() {
                 </S.LinkTo>
                 <S.MenuDivider />
                 <S.LinkTo to='/products'>
-                    <S.MenuOptions>ALL PRODUCTS</S.MenuOptions>
-                </S.LinkTo>
-                <S.MenuDivider />
-                <S.LinkTo to='/products'>
                     <S.MenuOptions>SKINCARE</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
@@ -61,7 +57,7 @@ export default function Menu() {
                     <S.MenuOptions>OUR VISION</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
-                <SocialMedia />
+                <MenuSocialMedia />
             </S.Menu>
         </S.Container>
     );

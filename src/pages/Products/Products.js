@@ -1,7 +1,24 @@
+import Product from "../../components/Product";
+import * as S from "./styled";
+import { useEffect } from "react";
+
 export default function Products() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div style={{ height: "50vh", backgroundColor: "red" }}>
-            <h1>Products</h1>
-        </div>
+        <S.Container>
+            <S.Header>PRODUCTS</S.Header>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+                <Product />
+            </div>
+        </S.Container>
     );
 }

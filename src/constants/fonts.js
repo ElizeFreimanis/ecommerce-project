@@ -1,6 +1,6 @@
 const fonts = {
     montserrat: "Montserrat, sans-serif",
-    sourceSerifPro: "Source Serif Pro, serif",
+    firaSans: "Fira Sans, sans-serif",
 };
 
 export default fonts;

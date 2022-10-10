@@ -13,7 +13,7 @@ export const HeaderImage = styled.img`
 `;
 
 export const InfoText = styled(MontserratParagraph)`
-    font-size: 14px;
+    font-size: 12px;
     padding: 0 0 30px 0;
     color: ${colors.darkBrown};
 `;
@@ -21,6 +21,7 @@ export const InfoText = styled(MontserratParagraph)`
 export const InfoTextContainer = styled.div`
     padding: 50px;
     text-align: center;
+    background-color: ${colors.lightBeige};
 `;
 
 export const TextDivider = styled(Divider)`

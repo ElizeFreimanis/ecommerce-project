@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import { SourceSerifParagraph, MontserratParagraph, MontserratTitle } from "../Typography/Typography";
+import { FiraSansParagraph, MontserratParagraph, MontserratTitle } from "../Typography/Typography";
 import colors from "../../constants/colors";
 import Button from "../Button/Button";
-import fonts from "../../constants/fonts";
 
 export const Container = styled.div`
-    padding: 10vw 0 10vw 0;
+    padding: 8vw 0 10vw 0;
     color: ${colors.darkBrown};
     background-color: ${colors.white};
 `;
 
 export const Header = styled(MontserratTitle)`
     padding: 0 0 2vw 3vw;
+    font-size: 16px;
 `;
 
 export const Content = styled.div`
@@ -43,10 +43,10 @@ export const Image = styled.img`
 
 export const ProductName = styled(MontserratParagraph)`
     padding-top: 1vw;
-    font-weight: 500;
+    font-weight: 600;
 `;
 
-export const Price = styled(SourceSerifParagraph)``;
+export const Price = styled(FiraSansParagraph)``;
 
 export const ShopButton = styled(Button)`
     border: 1px solid ${colors.darkBrown};

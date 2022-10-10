@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Product from "./pages/Product/Product";
+import ProductPage from "./pages/ProductPage";
 import Products from "./pages/Products/Products";
 import Purpose from "./pages/Purpose/Purpose";
 
@@ -18,7 +18,7 @@ root.render(
                     <Route path='/' element={<App />}>
                         <Route index element={<Home />} />
                         <Route path='products' element={<Products />} />
-                        <Route path='product' element={<Product />} />
+                        <Route path='productpage' element={<ProductPage />} />
                         <Route path='purpose' element={<Purpose />} />
                     </Route>
                 </Routes>

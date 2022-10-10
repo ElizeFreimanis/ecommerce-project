@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import colors from "./constants/colors";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -10,8 +9,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         height: 100%;
-        background-color: ${colors.lightBeige};
-        /* font-family: Source Serif Pro, serif; */
         font-family: 'Montserrat', sans-serif;
     }
 
@@ -21,5 +18,5 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-    padding-top: 60px;
+    padding-top: ${(props) => (props.paddingTop ? "60px" : 0)};
 `;

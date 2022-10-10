@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
     object-fit: cover;
+    width: 100%;
     position: absolute;
     z-index: 0;
     opacity: 0.6;
@@ -26,6 +27,7 @@ export const Content = styled.div`
 
 export const Header = styled(MontserratTitle)`
     font-size: 40px;
+    font-weight: 500;
 `;
 
 export const Paragraph = styled(MontserratParagraph)`
