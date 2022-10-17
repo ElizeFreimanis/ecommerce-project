@@ -17,7 +17,8 @@ export const Header = styled(MontserratTitle)`
 
 export const Content = styled.div`
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     padding: 0 3vw;
 
     &::-webkit-scrollbar {

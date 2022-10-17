@@ -31,7 +31,7 @@ export const ListItem = styled.li`
     margin: 5px;
 `;
 
-export const SustainabilityLink = styled(Link)`
+export const LinkTo = styled(Link)`
     text-decoration: none;
     color: ${colors.white};
 `;

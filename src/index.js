@@ -10,6 +10,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import Products from "./pages/Products/Products";
 import About from "./pages/About/About";
 import Sustainability from "./pages/Sustainability/Sustainability";
+import Contact from "./pages/Contact/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,7 @@ root.render(
                         <Route path='products/skincare' element={<Products title='Skincare' category='skincare' />} />
                         <Route path='productpage' element={<ProductPage />} />
                         <Route path='about' element={<About />} />
+                        <Route path='contact' element={<Contact />} />
                         <Route path='sustainability' element={<Sustainability />} />
                     </Route>
                 </Routes>
