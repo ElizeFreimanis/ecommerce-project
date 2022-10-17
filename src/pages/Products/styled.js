@@ -9,6 +9,7 @@ export const Container = styled.div`
 
 export const SpinnerContainer = styled.div`
     padding: 15px;
+    margin: auto;
 `;
 
 export const Header = styled(MontserratTitle)`

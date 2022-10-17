@@ -1,9 +1,26 @@
 import * as S from "./styled";
 import ImageSection from "../../components/ImageSection";
 import PopularSection from "../../components/PopularSection";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+    const products = useSelector((state) => state.products);
+
+    const makeupProducts = useMemo(
+        () => products.filter((p) => p.categories.find((p) => p.slug === "popular-makeup")),
+        [products]
+    );
+
+    const skincareProducts = useMemo(
+        () => products.filter((p) => p.categories.find((p) => p.slug === "popular-skincare")),
+        [products]
+    );
+
+    console.log(skincareProducts);
+
+    //console.log(products);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -25,14 +42,14 @@ export default function Home() {
                 image='/images/makeupCover.jpg'
                 link='/products/makeup'
             />
-            <PopularSection />
+            <PopularSection products={makeupProducts} />
             <ImageSection
                 header='SKINCARE'
                 paragraph='FOR THE PERFECT FACE'
                 image='/images/skincareCover.png'
                 link='/products/skincare'
             />
-            <PopularSection />
+            <PopularSection products={skincareProducts} />
         </S.Container>
     );
 }
