@@ -38,23 +38,23 @@ export default function Menu() {
             <S.Menu id='menu' open={menuOpen}>
                 <S.ClosingIcon onClick={toggle} />
                 <S.LinkTo to='/'>
-                    <S.MenuOptions>HOME</S.MenuOptions>
+                    <S.MenuOptions>home</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
                 <S.LinkTo to='/products/news'>
-                    <S.MenuOptions>NEWS</S.MenuOptions>
+                    <S.MenuOptions>news</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
                 <S.LinkTo to='/products/skincare'>
-                    <S.MenuOptions>SKINCARE</S.MenuOptions>
+                    <S.MenuOptions>skincare</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
                 <S.LinkTo to='/products/makeup'>
-                    <S.MenuOptions>MAKEUP</S.MenuOptions>
+                    <S.MenuOptions>makeup</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
-                <S.LinkTo to='/purpose'>
-                    <S.MenuOptions>OUR VISION</S.MenuOptions>
+                <S.LinkTo to='/about'>
+                    <S.MenuOptions>about</S.MenuOptions>
                 </S.LinkTo>
                 <S.MenuDivider />
                 <MenuSocialMedia />

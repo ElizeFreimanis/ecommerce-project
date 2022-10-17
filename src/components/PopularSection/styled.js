@@ -56,14 +56,16 @@ export const Price = styled(FiraSansParagraph)`
 `;
 
 export const ShopButton = styled(Button)`
-    border: 2px solid ${colors.darkBrown};
-    color: ${colors.darkBrown};
-    margin: 2vw 5vw 0 5vw;
+    /* border: 2px solid ${colors.darkBrown}; */
+    border: none;
+    background-color: ${colors.darkBeige};
+    /* color: ${colors.darkBrown} */
+    color: white;
+    margin-top: 2vw;
     padding: 1vw;
     font-weight: 600;
-    font-size: 13px;
-    /* position: absolute;
-    bottom: 0; */
+    font-size: 14px;
     width: 37vw;
-    height: 35px;
+    height: 40px;
+    letter-spacing: 1px;
 `;

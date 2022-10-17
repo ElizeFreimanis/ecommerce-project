@@ -9,7 +9,7 @@ export const Container = styled(FlexContainer)`
     top: 0;
     width: 100%;
     z-index: 3;
-    padding: 3% 2%;
+    padding: 6% 2%;
     justify-content: space-between;
     align-items: center;
     /* background-color: ${(props) => props.background && colors.lightBrown}; */
@@ -24,7 +24,7 @@ export const FlexDiv = styled(FlexContainer)`
 `;
 
 export const Logo = styled(Link)`
-    max-width: 30%;
+    max-width: 25%;
     display: flex;
     align-items: center;
     position: absolute;

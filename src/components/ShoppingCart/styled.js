@@ -5,7 +5,7 @@ import colors from "../../constants/colors";
 export const Container = styled.div``;
 
 export const Icon = styled(FiShoppingBag)`
-    font-size: 32px;
+    font-size: 27px;
     color: ${colors.white};
     order: 4;
 `;

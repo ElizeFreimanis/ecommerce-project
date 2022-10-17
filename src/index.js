@@ -5,9 +5,9 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import ProductPage from "./pages/ProductPage";
+import ProductPage from "./pages/ProductPage/ProductPage";
 import Products from "./pages/Products/Products";
-import Purpose from "./pages/Purpose/Purpose";
+import About from "./pages/About/About";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,7 +21,7 @@ root.render(
                         <Route path='products/news' element={<Products title='News' category='news' />} />
                         <Route path='products/skincare' element={<Products title='Skincare' category='skincare' />} />
                         <Route path='productpage' element={<ProductPage />} />
-                        <Route path='purpose' element={<Purpose />} />
+                        <Route path='about' element={<About />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

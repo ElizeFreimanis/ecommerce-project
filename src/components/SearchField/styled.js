@@ -13,5 +13,5 @@ export const SearchIcon = styled(FiSearch)`
     color: ${colors.white};
     display: flex;
     align-items: center;
-    font-size: 29px;
+    font-size: 25px;
 `;

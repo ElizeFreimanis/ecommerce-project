@@ -10,11 +10,6 @@ export const Container = styled(FlexContainer)`
     flex-direction: column;
 `;
 
-export const SubmitButton = styled(Button)`
-    margin-left: 5px;
-    font-size: 4vw;
-`;
-
 export const Title = styled.h1`
     font-size: 5vw;
     font-weight: 600;
@@ -25,6 +20,7 @@ export const Title = styled.h1`
 export const Text = styled.p`
     font-size: 4vw;
     line-height: 5.3vw;
+    margin-top: 1%;
 `;
 
 export const Form = styled(FlexContainer)`
@@ -46,4 +42,9 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+`;
+
+export const SubmitButton = styled(Button)`
+    margin-left: 5px;
+    font-size: 4vw;
 `;

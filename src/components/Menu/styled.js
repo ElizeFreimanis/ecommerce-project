@@ -13,7 +13,7 @@ export const Container = styled(FlexContainer)`
 `;
 
 export const MenuIcon = styled(FiAlignJustify)`
-    font-size: 35px;
+    font-size: 30px;
 `;
 
 export const Menu = styled.ul`
@@ -56,6 +56,8 @@ export const LinkTo = styled(Link)`
 export const MenuOptions = styled.li`
     margin: 9%;
     color: ${colors.white};
+    text-transform: uppercase;
+    letter-spacing: 3px;
 `;
 
 export const MenuDivider = styled(Divider)`
