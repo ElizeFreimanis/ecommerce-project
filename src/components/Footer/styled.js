@@ -2,6 +2,7 @@ import styled from "styled-components";
 import colors from "../../constants/colors";
 import Fonts from "../../constants/fonts";
 import { FlexContainer } from "../Layout/FlexContainer";
+import { Link } from "react-router-dom";
 
 export const Container = styled(FlexContainer)`
     flex-direction: column;
@@ -28,4 +29,9 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     margin: 5px;
+`;
+
+export const SustainabilityLink = styled(Link)`
+    text-decoration: none;
+    color: ${colors.white};
 `;

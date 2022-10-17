@@ -13,6 +13,10 @@ function App() {
     const location = useLocation();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    useEffect(() => {
         fetch("https://elizes-site.local/wp-json/wc/v3/products?per_page=100", { headers })
             .then((response) => response.json())
             .then((data) => dispatch(loadProducts(data)));

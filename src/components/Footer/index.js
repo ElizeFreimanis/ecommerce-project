@@ -10,7 +10,9 @@ export default function Footer() {
                 <S.List>
                     <S.ListItem>About CAIA</S.ListItem>
                     <S.ListItem>Contact CAIA</S.ListItem>
-                    <S.ListItem>Sustainabity</S.ListItem>
+                    <S.SustainabilityLink to='sustainability'>
+                        <S.ListItem>Sustainabity</S.ListItem>
+                    </S.SustainabilityLink>
                 </S.List>
             </S.TextContainer>
             <NewsLetter />

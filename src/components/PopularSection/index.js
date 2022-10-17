@@ -5,8 +5,8 @@ export default function PopularSection({ products }) {
         <S.Container>
             <S.Header>Popular</S.Header>
             <S.Content>
-                {products?.map((product) => (
-                    <S.Product>
+                {products?.map((product, id) => (
+                    <S.Product key={product.id}>
                         <S.Image alt='product' src={product.images[0].src} />
                         <S.ProductName>{product.name}</S.ProductName>
                         <div style={{ position: "absolute", bottom: 0, height: 70 }}>

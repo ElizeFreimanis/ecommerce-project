@@ -1,7 +1,7 @@
 import * as S from "./styled";
 import ImageSection from "../../components/ImageSection";
 import PopularSection from "../../components/PopularSection";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
 export default function Home() {
@@ -16,14 +16,6 @@ export default function Home() {
         () => products.filter((p) => p.categories.find((p) => p.slug === "popular-skincare")),
         [products]
     );
-
-    console.log(skincareProducts);
-
-    //console.log(products);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <S.Container>

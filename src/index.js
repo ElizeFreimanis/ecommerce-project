@@ -4,10 +4,12 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home/Home";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import Products from "./pages/Products/Products";
 import About from "./pages/About/About";
+import Sustainability from "./pages/Sustainability/Sustainability";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +24,7 @@ root.render(
                         <Route path='products/skincare' element={<Products title='Skincare' category='skincare' />} />
                         <Route path='productpage' element={<ProductPage />} />
                         <Route path='about' element={<About />} />
+                        <Route path='sustainability' element={<Sustainability />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

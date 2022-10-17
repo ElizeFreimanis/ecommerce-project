@@ -2,8 +2,14 @@ import styled from "styled-components";
 import colors from "../../constants/colors";
 
 export const Container = styled.div`
-    padding: 5% 2%;
+    text-align: center;
     color: ${colors.darkGrey};
+`;
+
+export const HeaderImage = styled.img``;
+
+export const Content = styled.div`
+    padding: 5% 2%;
 `;
 
 export const Header = styled.h1`
@@ -18,4 +24,4 @@ export const Text = styled.p`
     letter-spacing: 1px;
 `;
 
-export const Image = styled.img``;
+export const FooterImage = styled.img``;
