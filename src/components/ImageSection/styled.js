@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { MontserratParagraph, MontserratTitle } from "../Typography/Typography";
 import Button from "../Button/Button";
+import colors from "../../constants/colors";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     background-color: black;
@@ -32,6 +34,10 @@ export const Header = styled(MontserratTitle)`
 
 export const Paragraph = styled(MontserratParagraph)`
     padding-left: 2px;
+`;
+
+export const LinkTo = styled(Link)`
+    color: ${colors.white};
 `;
 
 export const SectionButton = styled(Button)`

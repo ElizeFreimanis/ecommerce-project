@@ -3,7 +3,7 @@ import * as S from "./styled";
 
 export default function Sustainability() {
     return (
-        <S.Container style={{ textAlign: "center" }}>
+        <S.Container>
             <S.HeaderImage
                 alt='about header'
                 src={window.innerWidth > 800 ? "/images/sustainabilityHeader.jpg" : "/images/sustainabilityHeaderSmall.jpg"}

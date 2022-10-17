@@ -1,10 +1,10 @@
 import TextSection from "../../components/TextSection";
+import * as S from "./styled";
 
 export default function About() {
     return (
-        <div>
-            <img
-                style={{ objectFit: "cover", width: "100%" }}
+        <S.Container>
+            <S.HeaderImage
                 alt='about header'
                 src={window.innerWidth > 800 ? "/images/aboutHeaderImg.jpg" : "/images/aboutHeaderImgSmall.jpg"}
             />
@@ -53,6 +53,6 @@ export default function About() {
                 <br /> All products are vegan and manufactured in France with high quality ingredients presented in luxury
                 recycable packaging.
             </TextSection>
-        </div>
+        </S.Container>
     );
 }

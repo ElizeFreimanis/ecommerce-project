@@ -1,5 +1,4 @@
 import * as S from "./styled";
-import { Link } from "react-router-dom";
 
 export default function ImageSection({ header, paragraph, image, link }) {
     return (
@@ -8,9 +7,9 @@ export default function ImageSection({ header, paragraph, image, link }) {
             <S.Content>
                 <S.Header>{header}</S.Header>
                 <S.Paragraph>{paragraph}</S.Paragraph>
-                <Link style={{ color: "white" }} to={link}>
+                <S.LinkTo to={link}>
                     <S.SectionButton>SHOP NOW</S.SectionButton>
-                </Link>
+                </S.LinkTo>
             </S.Content>
         </S.Container>
     );

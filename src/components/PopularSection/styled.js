@@ -55,11 +55,15 @@ export const Price = styled(FiraSansParagraph)`
     padding-top: 5px;
 `;
 
+export const BottomSection = styled.div`
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+`;
+
 export const ShopButton = styled(Button)`
-    /* border: 2px solid ${colors.darkBrown}; */
     border: none;
     background-color: ${colors.darkBeige};
-    /* color: ${colors.darkBrown} */
     color: white;
     margin-top: 2vw;
     padding: 1vw;
