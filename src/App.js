@@ -19,7 +19,8 @@ function App() {
     useEffect(() => {
         fetch("https://elizes-site.local/wp-json/wc/v3/products?per_page=100", { headers })
             .then((response) => response.json())
-            .then((data) => dispatch(loadProducts(data)));
+            .then((data) => dispatch(loadProducts(data)))
+            .catch((error) => console.error(error));
     }, [dispatch]);
 
     console.log(products);
