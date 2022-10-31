@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeFromCart, removeAllFromCart } from "../../../redux/actions";
+import { removeFromCart, removeAllFromCart, addToCart } from "../../../redux/actions";
 import * as S from "./styled";
 
 export default function CartProduct({ name, src, description, price, products }) {
@@ -15,6 +15,11 @@ export default function CartProduct({ name, src, description, price, products })
         dispatch(removeAllFromCart(products[0].id));
     };
 
+    const addOne = (e) => {
+        e.stopPropagation();
+        dispatch(addToCart(products[0]));
+    };
+
     return (
         <S.Container>
             <S.Image alt='product image' src={src} />
@@ -27,7 +32,7 @@ export default function CartProduct({ name, src, description, price, products })
                 <S.AmountContainer>
                     <S.Minus onClick={removeOne} />
                     <S.Amount>{products.length}</S.Amount>
-                    <S.Plus />
+                    <S.Plus onClick={addOne} />
                 </S.AmountContainer>
                 <S.Remove onClick={removeAll} />
             </S.EditContainer>
