@@ -23,7 +23,7 @@ function App() {
             .catch((error) => console.error(error));
     }, [dispatch]);
 
-    console.log(products);
+    // console.log(products);
 
     return (
         <>

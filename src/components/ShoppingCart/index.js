@@ -43,19 +43,29 @@ export default function ShoppingCart() {
 
     const totalPrice = products.reduce((total, item) => total + Number(item.price), 0);
 
+    const cartProductsObject = products.reduce(
+        (object, product) => ({
+            ...object,
+            [product.id]: object[product.id] ? [...object[product.id], product] : [product],
+        }),
+        {}
+    );
+
+    const productsArray = Object.values(cartProductsObject);
+
     return (
         <S.Container>
             <S.Icon onClick={toggle} />
             <S.Content id='shoppingCart' open={shoppingCartOpen}>
-                {products.length > 0 ? (
-                    products?.map((product, index) => (
+                {productsArray.length > 0 ? (
+                    productsArray?.map((products, index) => (
                         <div key={index}>
                             <CartProduct
-                                src={product.images[0].src}
-                                name={product.name}
-                                description={product.short_description}
-                                price={product.price}
-                                product={product}
+                                src={products[0].images[0].src}
+                                name={products[0].name}
+                                description={products[0].short_description}
+                                price={products[0].price}
+                                products={products}
                             />
                             <S.ProductDivider />
                         </div>
