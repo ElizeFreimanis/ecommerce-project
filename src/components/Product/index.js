@@ -1,6 +1,10 @@
 import * as S from "./styled";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions";
 
-export default function Product({ price, name, description, img }) {
+export default function Product({ price, name, description, img, product }) {
+    const dispatch = useDispatch();
+
     return (
         <S.Container>
             <S.Image alt='product' src={img} />
@@ -10,7 +14,7 @@ export default function Product({ price, name, description, img }) {
             </S.ProductInformation>
             <S.ProductFooter>
                 <S.Price>{price} KR</S.Price>
-                <S.ProductButton>ADD TO BAG</S.ProductButton>
+                <S.ProductButton onClick={() => dispatch(addToCart(product))}>ADD TO BAG</S.ProductButton>
             </S.ProductFooter>
         </S.Container>
     );

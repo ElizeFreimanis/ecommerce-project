@@ -3,8 +3,13 @@ import { FiShoppingBag } from "react-icons/fi";
 import colors from "../../constants/colors";
 import Button from "../Button/Button";
 import fonts from "../../constants/fonts";
+import { Divider } from "../Layout/Divider";
 
 export const Container = styled.div`
+    position: relative;
+`;
+
+export const Content = styled.div`
     width: 80%;
     position: fixed;
     right: 0;
@@ -16,12 +21,21 @@ export const Container = styled.div`
     transform: ${(props) => (props.open ? "translateX(0)" : "translateX(100%)")};
     transition: transform 0.35s;
     font-family: ${fonts.firaSans};
+    overflow: scroll;
 `;
 
 export const Icon = styled(FiShoppingBag)`
     font-size: 27px;
     color: ${colors.white};
     order: 4;
+`;
+
+export const EmptyText = styled.h4`
+    font-family: ${fonts.montserrat};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 10%;
 `;
 
 export const BottomSection = styled.div`
@@ -33,6 +47,8 @@ export const BottomSection = styled.div`
 
 export const Total = styled.h3`
     font-size: 20px;
+    font-weight: 500;
+    color: ${colors.darkBrown};
 `;
 
 export const CheckoutButton = styled(Button)`
@@ -43,4 +59,9 @@ export const CheckoutButton = styled(Button)`
     font-size: 20px;
     text-transform: uppercase;
     margin-top: 10px;
+`;
+
+export const ProductDivider = styled(Divider)`
+    background-color: darkgrey;
+    width: 100%;
 `;

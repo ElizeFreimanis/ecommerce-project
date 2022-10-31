@@ -2,10 +2,13 @@ import * as S from "./styled";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+import CartProduct from "./CartProduct";
 
 export default function ShoppingCart() {
     const [shoppingCartOpen, setShoppingCartOpen] = useState(false);
     const location = useLocation();
+    const products = useSelector((state) => state.cartProducts);
 
     useEffect(() => {
         setShoppingCartOpen(false);
@@ -15,6 +18,12 @@ export default function ShoppingCart() {
         e.stopPropagation();
         setShoppingCartOpen(!shoppingCartOpen);
     };
+
+    useEffect(() => {
+        if (products.length > 0) {
+            setShoppingCartOpen(true);
+        }
+    }, [products]);
 
     useEffect(() => {
         if (shoppingCartOpen) {
@@ -32,21 +41,33 @@ export default function ShoppingCart() {
         }
     }, [shoppingCartOpen]);
 
-    //använd reduce funktionen till att lägga ihop alla priser (?)
+    const totalPrice = products.reduce((total, item) => total + Number(item.price), 0);
 
     return (
-        <div>
+        <S.Container>
             <S.Icon onClick={toggle} />
-            <S.Container id='shoppingCart' open={shoppingCartOpen}>
-                <h2 style={{ textAlign: "left" }}>Jag är en produkt</h2>
-                <h2 style={{ textAlign: "left" }}>Jag är en produkt</h2>
-                <h2 style={{ textAlign: "left" }}>Jag är en produkt</h2>
-                <h2 style={{ textAlign: "left" }}>Jag är en produkt</h2>
+            <S.Content id='shoppingCart' open={shoppingCartOpen}>
+                {products.length > 0 ? (
+                    products?.map((product, index) => (
+                        <div key={index}>
+                            <CartProduct
+                                src={product.images[0].src}
+                                name={product.name}
+                                description={product.short_description}
+                                price={product.price}
+                                product={product}
+                            />
+                            <S.ProductDivider />
+                        </div>
+                    ))
+                ) : (
+                    <S.EmptyText>Your shopping cart is empty!</S.EmptyText>
+                )}
                 <S.BottomSection>
-                    <S.Total>Total: 350 kr</S.Total>
+                    <S.Total>Total: {totalPrice} kr</S.Total>
                     <S.CheckoutButton>checkout</S.CheckoutButton>
                 </S.BottomSection>
-            </S.Container>
-        </div>
+            </S.Content>
+        </S.Container>
     );
 }

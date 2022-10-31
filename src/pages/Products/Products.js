@@ -25,6 +25,7 @@ export default function Products({ title, category }) {
                             name={product.name}
                             description={product.short_description}
                             img={product.images[0].src}
+                            product={product}
                         />
                     ))
                 )}

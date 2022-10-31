@@ -18,4 +18,6 @@ export const Text = styled.p`
     letter-spacing: 1px;
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+    width: 100%;
+`;
