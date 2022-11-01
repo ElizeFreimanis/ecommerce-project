@@ -3,11 +3,19 @@ import { FlexContainer } from "../Layout/FlexContainer";
 import { MontserratTitle, MontserratParagraph } from "../Typography/Typography";
 import Button from "../Button/Button";
 import colors from "../../constants/colors";
+import { Link } from "react-router-dom";
+
+export const Wrapper = styled.div`
+    width: 49%;
+`;
+
+export const LinkTo = styled(Link)`
+    text-decoration: none;
+`;
 
 export const Container = styled(FlexContainer)`
     flex-direction: column;
     text-align: center;
-    width: 49%;
     position: relative;
     padding-bottom: 80px;
 

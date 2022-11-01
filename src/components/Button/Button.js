@@ -10,6 +10,7 @@ export const Button = styled.button`
     font-size: 17px;
     background: transparent;
     color: inherit;
+    text-transform: uppercase;
 `;
 
 export default Button;

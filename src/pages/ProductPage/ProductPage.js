@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import * as S from "./styled";
 
 export default function ProductPage() {
     const location = useLocation();
     const product = location.state;
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    console.log(product);
 
     const images = product.images;
 
@@ -20,25 +22,20 @@ export default function ProductPage() {
     };
 
     return (
-        <div>
-            <div>
-                <img style={{ width: "95%", margin: "auto" }} src={product.images[currentIndex].src} alt='product' />
-                <FiChevronLeft onClick={goToPrevious} />
-                <FiChevronRight onClick={goToNext} />
-            </div>
-            <div style={{ display: "flex", overflow: "scroll" }}>
+        <S.Container>
+            <S.ImageContainer>
+                <S.LargeImage src={product.images[currentIndex].src} alt='product' />
+                <S.LeftArrow onClick={goToPrevious} />
+                <S.RightArrow onClick={goToNext} />
+            </S.ImageContainer>
+            <S.ImagesContainer>
                 {images.map((image, index) => (
-                    <div>
-                        <img
-                            key={index}
-                            style={{ width: 80 }}
-                            src={image.src}
-                            alt='product'
-                            onClick={() => setCurrentIndex(index)}
-                        />
-                    </div>
+                    <S.SmallImage key={index} src={image.src} alt='product' onClick={() => setCurrentIndex(index)} />
                 ))}
-            </div>
-        </div>
+            </S.ImagesContainer>
+            <S.Name>{product.name}</S.Name>
+            <S.Price>{product.price} kr</S.Price>
+            <S.PurchaseButton>add to cart</S.PurchaseButton>
+        </S.Container>
     );
 }

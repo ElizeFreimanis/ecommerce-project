@@ -8,7 +8,7 @@ export default function ImageSection({ header, paragraph, image, link }) {
                 <S.Header>{header}</S.Header>
                 <S.Paragraph>{paragraph}</S.Paragraph>
                 <S.LinkTo to={link}>
-                    <S.SectionButton>SHOP NOW</S.SectionButton>
+                    <S.SectionButton>shop now</S.SectionButton>
                 </S.LinkTo>
             </S.Content>
         </S.Container>
