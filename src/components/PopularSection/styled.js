@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FiraSansParagraph, MontserratParagraph, MontserratTitle } from "../Typography/Typography";
 import colors from "../../constants/colors";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     padding: 8vw 0 10vw 0;
@@ -39,6 +40,8 @@ export const Product = styled.div`
         margin-left: 4vw;
     }
 `;
+
+export const LinkTo = styled(Link)``;
 
 export const Image = styled.img`
     width: 40vw;

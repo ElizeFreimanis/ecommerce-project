@@ -11,7 +11,9 @@ export default function PopularSection({ products }) {
             <S.Content>
                 {products?.map((product) => (
                     <S.Product key={product.id}>
-                        <S.Image alt='product' src={product.images[0].src} />
+                        <S.LinkTo to='productpage' state={product}>
+                            <S.Image alt='product' src={product.images[0].src} />
+                        </S.LinkTo>
                         <S.ProductName>{product.name}</S.ProductName>
                         <S.BottomSection>
                             <S.Price>{product.price} SEK</S.Price>
