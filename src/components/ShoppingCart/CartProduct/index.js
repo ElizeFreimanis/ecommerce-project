@@ -26,7 +26,7 @@ export default function CartProduct({ name, src, description, price, products })
             <S.InfoContainer>
                 <S.Name>{name}</S.Name>
                 <S.Description dangerouslySetInnerHTML={{ __html: description }}></S.Description>
-                <S.Price>{price} kr</S.Price>
+                <S.Price>{price} SEK</S.Price>
             </S.InfoContainer>
             <S.EditContainer>
                 <S.AmountContainer>

@@ -20,6 +20,7 @@ const iconStyles = css`
 
 export const Container = styled.div`
     text-align: center;
+    color: ${colors.darkBrown};
 `;
 
 export const ImageContainer = styled.div`
@@ -58,16 +59,36 @@ export const SmallImage = styled.img`
     }
 `;
 
+export const InformationContainer = styled.div`
+    margin: 5%;
+`;
+
 export const Name = styled.h2`
     font-weight: 600;
     letter-spacing: 1px;
 `;
 
-export const Price = styled.h2`
+export const Price = styled.h3`
     font-weight: 600;
     letter-spacing: 1px;
+    font-size: 1.2rem;
+    padding-top: 5%;
 `;
 
 export const PurchaseButton = styled(Button)`
     background-color: ${colors.lightBrown};
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    height: 55px;
+    color: white;
+    margin-top: 5%;
+`;
+
+export const ProductInformation = styled.p`
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 5% 0;
+    line-height: 20px;
+    text-align: left;
 `;

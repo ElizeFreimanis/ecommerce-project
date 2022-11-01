@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { addToCart } from "../../redux/actions";
 import * as S from "./styled";
 
 export default function ProductPage() {
     const location = useLocation();
     const product = location.state;
     const [currentIndex, setCurrentIndex] = useState(0);
+    const dispatch = useDispatch();
 
     console.log(product);
 
@@ -33,9 +36,12 @@ export default function ProductPage() {
                     <S.SmallImage key={index} src={image.src} alt='product' onClick={() => setCurrentIndex(index)} />
                 ))}
             </S.ImagesContainer>
-            <S.Name>{product.name}</S.Name>
-            <S.Price>{product.price} kr</S.Price>
-            <S.PurchaseButton>add to cart</S.PurchaseButton>
+            <S.InformationContainer>
+                <S.Name>{product.name}</S.Name>
+                <S.Price>{product.price} SEK</S.Price>
+                <S.PurchaseButton onClick={() => dispatch(addToCart(product))}>add to bag</S.PurchaseButton>
+                <S.ProductInformation dangerouslySetInnerHTML={{ __html: product.description }}></S.ProductInformation>
+            </S.InformationContainer>
         </S.Container>
     );
 }

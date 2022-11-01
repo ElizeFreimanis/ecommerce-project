@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
     width: 49%;
+    margin-top: 12%;
 `;
 
 export const LinkTo = styled(Link)`
@@ -17,7 +18,7 @@ export const Container = styled(FlexContainer)`
     flex-direction: column;
     text-align: center;
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 90px;
 
     &:nth-child(n + 3) {
         margin-top: 50px;
@@ -71,5 +72,5 @@ export const ProductButton = styled(Button)`
     letter-spacing: 1px;
     background-color: ${colors.darkBeige};
     color: white;
-    margin-top: 3px;
+    margin-top: 5px;
 `;

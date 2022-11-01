@@ -74,7 +74,7 @@ export default function ShoppingCart() {
                     <S.EmptyText>Your shopping cart is empty!</S.EmptyText>
                 )}
                 <S.BottomSection>
-                    <S.Total>Total: {totalPrice} kr</S.Total>
+                    <S.Total>Total: {totalPrice} SEK</S.Total>
                     <S.CheckoutButton>checkout</S.CheckoutButton>
                 </S.BottomSection>
             </S.Content>
