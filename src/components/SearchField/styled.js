@@ -25,7 +25,7 @@ export const SearchField = styled.input`
     height: 50px;
     background-color: ${colors.darkBeige};
     border: none;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 10px 10px 10px 20px;
     font-family: ${Fonts.montserrat};
     color: ${colors.darkBrown};

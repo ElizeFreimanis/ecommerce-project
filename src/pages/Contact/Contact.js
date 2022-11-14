@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <S.Container>
             <S.Header>Contact CAIA</S.Header>
-            <S.Paragraph>CAIA works for you, so please don't even hesitate to get in touch with us.</S.Paragraph>
+            <S.Paragraph>CAIA works for you, so please don't even hesitate to get in touch with us!</S.Paragraph>
             <S.List>
                 <S.ListItem style={{ fontWeight: 600 }}>CAIA AB</S.ListItem>
                 <S.ListItem>Placeholderadress 12</S.ListItem>
