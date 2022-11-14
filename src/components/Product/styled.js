@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FlexContainer } from "../Layout/FlexContainer";
-import { MontserratTitle, MontserratParagraph } from "../Typography/Typography";
 import Button from "../Button/Button";
 import colors from "../../constants/colors";
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ export const ProductInformation = styled(FlexContainer)`
     flex-direction: column;
 `;
 
-export const ProductName = styled(MontserratTitle)`
+export const ProductName = styled.h1`
     font-size: 4vw;
     color: ${colors.darkBeige};
     font-weight: 600;
@@ -41,7 +40,7 @@ export const ProductName = styled(MontserratTitle)`
     height: 40px;
 `;
 
-export const ProductDescription = styled(MontserratParagraph)`
+export const ProductDescription = styled.p`
     margin-top: 1%;
     font-size: 3.5vw;
     color: ${colors.darkBrown};
@@ -57,7 +56,7 @@ export const ProductFooter = styled.div`
     margin-top: 1vh;
 `;
 
-export const Price = styled(MontserratParagraph)`
+export const Price = styled.p`
     font-size: 4vw;
     color: ${colors.darkBrown};
     font-weight: 600;

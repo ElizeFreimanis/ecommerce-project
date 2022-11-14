@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MontserratParagraph, MontserratTitle } from "../Typography/Typography";
 import Button from "../Button/Button";
 import colors from "../../constants/colors";
 import { Link } from "react-router-dom";
@@ -27,12 +26,12 @@ export const Content = styled.div`
     height: 100%;
 `;
 
-export const Header = styled(MontserratTitle)`
+export const Header = styled.h1`
     font-size: 40px;
     font-weight: 500;
 `;
 
-export const Paragraph = styled(MontserratParagraph)`
+export const Paragraph = styled.p`
     padding-left: 2px;
 `;
 

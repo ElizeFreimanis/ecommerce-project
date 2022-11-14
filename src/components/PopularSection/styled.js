@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FiraSansParagraph, MontserratParagraph, MontserratTitle } from "../Typography/Typography";
 import colors from "../../constants/colors";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ export const Container = styled.div`
     background-color: ${colors.white};
 `;
 
-export const Header = styled(MontserratTitle)`
+export const Header = styled.h1`
     padding-left: 3vw;
     font-size: 16px;
     text-transform: uppercase;
@@ -49,13 +48,15 @@ export const Image = styled.img`
     object-fit: contain;
 `;
 
-export const ProductName = styled(MontserratParagraph)`
+export const ProductName = styled.p`
     width: 40vw;
+    font-size: 12px;
     padding-top: 1vw;
     font-weight: 600;
 `;
 
-export const Price = styled(FiraSansParagraph)`
+export const Price = styled.p`
+    font-size: 12px;
     padding-top: 5px;
 `;
 

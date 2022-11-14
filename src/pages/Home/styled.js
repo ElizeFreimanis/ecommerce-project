@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { MontserratParagraph } from "../../components/Typography/Typography";
 import { Divider } from "../../components/Layout/Divider";
 import colors from "../../constants/colors";
+import fonts from "../../constants/fonts";
 
 export const Container = styled.div``;
 
@@ -13,7 +13,9 @@ export const HeaderImage = styled.img`
     backface-visibility: hidden;
 `;
 
-export const InfoText = styled(MontserratParagraph)`
+export const InfoText = styled.p`
+    font-family: ${fonts.firaSans};
+    line-height: 18px;
     font-size: 12px;
     padding: 0 0 30px 0;
     color: ${colors.darkBrown};

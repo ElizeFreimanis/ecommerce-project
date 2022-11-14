@@ -20,7 +20,6 @@ export const Menu = styled.ul`
     text-align: center;
     list-style: none;
     font-weight: 500;
-    font-family: ${fonts.montserrat};
     font-size: 18px;
     position: fixed;
     transform: ${(props) => (props.open ? "translateX(0)" : "translateX(-100%)")};
