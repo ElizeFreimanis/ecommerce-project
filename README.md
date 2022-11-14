@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Mobile first e-commerce project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a semi replica of the brand CAIA's webshop. It is created for educational purposes and is built in React with the help of Redux and styled components.
 
 ## Available Scripts
 
