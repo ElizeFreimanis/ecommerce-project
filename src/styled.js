@@ -12,6 +12,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
     }
 
+    .no-scroll {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
     img {
         max-width: 100%;
         display: block;
@@ -19,5 +24,5 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-    padding-top: ${(props) => (props.paddingTop ? "60px" : 0)};
+  padding-top: ${(props) => (props.paddingTop ? "60px" : 0)};
 `;
