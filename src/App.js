@@ -24,8 +24,6 @@ function App() {
       .catch((error) => console.error(error));
   }, [dispatch]);
 
-  // console.log(products);
-
   return (
     <>
       <S.GlobalStyle />
