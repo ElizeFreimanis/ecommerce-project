@@ -5,6 +5,9 @@ const API_SECRET = process.env.REACT_APP_API_SECRET;
 
 const headers = new Headers();
 
-headers.append("Authorization", "Basic " + base64.encode(API_KEY + ":" + API_SECRET));
+headers.append(
+  "Authorization",
+  "Basic " + base64.encode(API_KEY + ":" + API_SECRET)
+);
 
 export default headers;
